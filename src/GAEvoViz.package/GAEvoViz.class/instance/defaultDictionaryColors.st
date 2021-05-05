@@ -19,6 +19,7 @@ defaultDictionaryColors
 		at: 'highlightInnerBox' put: Color cyan"(Color r: 111/255 g: 1 b: 233/255)";
 		"at: 'fontMethodBox' put: Color white;"
 		at: 'fontMethodBox' put: Color black;
+		at: 'fontBox' put: Color black;
 		at: 'border' put: Color transparent "(Color r: 0.12549019607843137 g: 0.1803921568627451 b: 0.23529411764705882)";
 		at: 'axis' put: (Color r: 0.12549019607843137 g: 0.1803921568627451 b: 0.23529411764705882);
 		at: 'fittestFitness' put: (Color r: 0 g: 1 b: 0.67);
@@ -32,4 +33,5 @@ defaultDictionaryColors
 		at: 'testcaseNode' put: (Color transparent);
 		at: 'markedBoxNode' put: (Color r: 0 g: 1 b: 0.67);
 		at: 'boxFontColor' put: (Color black);
+		at: 'fontBar' put: Color black;
 		yourself.

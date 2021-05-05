@@ -8,7 +8,7 @@ isElement: element fitnessValue: number of: object higher: memo
 	^ previousValues 
 		ifNotEmpty: [ previousValues max < number  ] 
 		ifEmpty: [ object parents allSatisfy: [ :obj |
-			self isElement: element fitnessValue: number of: object higher: memo
+			self isElement: element fitnessValue: number of: obj higher: memo
 				 ] ]
 	
 	

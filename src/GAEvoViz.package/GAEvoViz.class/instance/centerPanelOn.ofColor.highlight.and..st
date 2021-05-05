@@ -41,4 +41,9 @@ centerPanelOn: canvas ofColor: dictColor highlight: highlights and: memo
 		width: 5;
 		color: (dictColor at: 'edge');
 		connectFromAll: [ :obj | obj parents ].
-	^ Array with: shapes with: barGroup with: boxIds
+	^ Dictionary new 
+		at: 'boxIds' put: boxIds;
+		at: 'centerPanel' put: shapes;
+		at: 'barGroup' put: barGroup;
+		at: 'ys' put: ys;
+		yourself
