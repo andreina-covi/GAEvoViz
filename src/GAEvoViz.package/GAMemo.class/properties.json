@@ -6,12 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"dictionaryColors",
-		"populations",
-		"generations",
-		"populationFile",
-		"elementsFile"
+		"memo"
 	],
-	"name" : "GAEvoViz",
+	"name" : "GAMemo",
 	"type" : "normal"
 }

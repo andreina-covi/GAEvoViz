@@ -5,13 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"dictionaryColors",
-		"populations",
-		"generations",
-		"populationFile",
-		"elementsFile"
-	],
-	"name" : "GAEvoViz",
+	"instvars" : [ ],
+	"name" : "Demo",
 	"type" : "normal"
 }
