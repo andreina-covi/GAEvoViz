@@ -11,7 +11,7 @@ run
 		highlightColor: (dictColor at: 'highlightInnerBox');
 		yourself.
 	memo := self convertDataPopulationOnMemo.
-	dictCenterPanel := self centerPanelOn: canvas ofColor: dictColor highlight: (Array with: highlightBox with: highlightInnerBox).
+	dictCenterPanel := self centerPanelOn: canvas ofColor: dictColor highlight: (Array with: highlightBox with: highlightInnerBox) and: memo.
 	boxIds := dictCenterPanel at: 'boxIds'.
 	ys := dictCenterPanel at: 'ys'.
 	barGroup := dictCenterPanel at: 'barGroup'.

@@ -1,3 +1,3 @@
 accessing
 id
-	^ 1
+	^ id

@@ -1,3 +1,3 @@
 printing
 printOn: aStream
-	^ 'hello'
+	aStream nextPutAll: id asString

@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"fitness"
+		"fitness",
+		"id"
 	],
 	"name" : "ElementDemo",
 	"type" : "normal"

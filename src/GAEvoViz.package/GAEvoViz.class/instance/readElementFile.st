@@ -6,5 +6,5 @@ readElementFile
 		content := (NeoCSVReader on: stream) skipHeader;
 			upToEnd.
 	].
-	^ Array with: content
+	^ content
 	

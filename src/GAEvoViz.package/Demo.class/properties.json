@@ -5,7 +5,13 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"children",
+		"parents",
+		"generation",
+		"position",
+		"elements"
+	],
 	"name" : "Demo",
 	"type" : "normal"
 }

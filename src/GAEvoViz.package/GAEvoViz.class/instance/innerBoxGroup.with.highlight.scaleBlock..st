@@ -10,7 +10,7 @@ innerBoxGroup: object with: memo highlight: highlight scaleBlock: block
 			scaleColor := block value: element id.
 			"an element should return the shape that represents it in the visualization"
 			shape := element shape: object.
-			(self innerBox: element withGradientFrom: (scaleColor scale: element fitness) to: (scaleColor scale: 100) andShape: shape) @ highlight; yourself
+			(self innerBox: element withGradientFrom: (scaleColor scale: (memo fitnessValueOf: object generation given: object position and: element id)) to: (scaleColor scale: 100) andShape: shape) @ highlight; yourself
 			]).
 	RSGridLayout on: group.
 	^ group

@@ -3,9 +3,9 @@ box: object ofColor: dictColor with: memo highlight: highlight scaleBlock: block
 	| group innerBoxGroup fitnessValue isHigher enhance |
 	group := RSGroup new.
 	innerBoxGroup := self innerBoxGroup: object with: memo highlight: highlight scaleBlock: block.
-	fitnessValue := object fitness.
+	fitnessValue := memo fitnessValueOf: object generation given: object position.
 	isHigher := object parents ifEmpty: [ false ] 
-		ifNotEmpty: [ object parents allSatisfy: [ :obj | object fitness < fitnessValue ] ]. 
+		ifNotEmpty: [ object parents allSatisfy: [ :obj | (memo fitnessValueOf: obj generation given: obj position) < fitnessValue ] ]. 
 	enhance := innerBoxGroup notEmpty or: [ isHigher ].
 	group add: innerBoxGroup;
 		add: (RSGroup new

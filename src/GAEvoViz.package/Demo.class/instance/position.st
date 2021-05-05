@@ -1,3 +1,3 @@
 accessing
 position 	
-	^ 4
+	^ position
