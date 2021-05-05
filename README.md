@@ -1,7 +1,7 @@
 # GAEvoViz
 Visualization of GA evolution
 
-##Installation
+## Installation
 
 ```Smalltalk
 Metacello new
