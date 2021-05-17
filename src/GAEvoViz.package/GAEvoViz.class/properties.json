@@ -9,7 +9,8 @@
 		"dictionaryColors",
 		"populations",
 		"populationFile",
-		"elementsFile"
+		"elementsFile",
+		"comparisonSelector"
 	],
 	"name" : "GAEvoViz",
 	"type" : "normal"

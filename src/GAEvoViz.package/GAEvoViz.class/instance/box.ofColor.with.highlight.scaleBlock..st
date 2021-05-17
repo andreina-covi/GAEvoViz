@@ -1,12 +1,12 @@
 as yet unclassified
 box: object ofColor: dictColor with: memo highlight: highlight scaleBlock: block
-	| group innerBoxGroup fitnessValue isHigher enhance |
+	| group innerBoxGroup fitnessValue isRemarkable enhance |
 	group := RSGroup new.
 	innerBoxGroup := self innerBoxGroup: object with: memo highlight: highlight scaleBlock: block.
-	fitnessValue := memo fitnessValueOf: object generation given: object position.
-	isHigher := object parents ifEmpty: [ false ] 
-		ifNotEmpty: [ object parents allSatisfy: [ :obj | (memo fitnessValueOf: obj generation given: obj position) < fitnessValue ] ]. 
-	enhance := innerBoxGroup notEmpty or: [ isHigher ].
+	fitnessValue := (memo fitnessValueOf: object generation given: object position) round: 2.
+	isRemarkable := object parents ifEmpty: [ false ] 
+		ifNotEmpty: [ object parents allSatisfy: [ :obj | (memo fitnessValueOf: obj generation given: obj position) perform: comparisonSelector with: fitnessValue ] ]. 
+	enhance := innerBoxGroup notEmpty or: [ isRemarkable ].
 	group add: innerBoxGroup;
 		add: (RSGroup new
 			add: (RSComposite new 
@@ -18,8 +18,8 @@ box: object ofColor: dictColor with: memo highlight: highlight scaleBlock: block
 		shapes: (group flatCollect: #yourself);
 		paint: ((dictColor at: 'backgroundBox') alpha: (enhance ifFalse: [ 0.5 ] ifTrue: [1]));
 		model: object;
-		border: (RSBorder new width: (isHigher ifTrue: [ 0 ] ifFalse: [ 1 ] );
+		border: (RSBorder new width: (isRemarkable ifTrue: [ 8 ] ifFalse: [ 1 ] );
 			color: (dictColor at: 'borderBox'));
 		padding: 10;
-		popupText: object asString;
+		popupText: object print;
 		draggable

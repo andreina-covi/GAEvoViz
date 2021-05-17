@@ -3,7 +3,7 @@ innerBoxGroup: object with: memo highlight: highlight scaleBlock: block
 	| group |
 	group := RSGroup new.
 	group addAll: (object elements 
-		select: [:element | self isElement: element fitnessValue: (memo at: object generation of: object position getElementFitnessValue: element id) of: object higher: memo ]
+		select: [:element | self isElement: element fitnessValue: (memo at: object generation of: object position getElementFitnessValue: element id) of: object remarkable: memo ]
 		thenCollect: [:element |
 			| scaleColor shape |
 			"each element must have an id to differentiate with each other"

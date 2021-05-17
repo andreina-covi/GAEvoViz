@@ -4,6 +4,8 @@ convertDataPopulationOnMemo
 	populationsData := self readPopulationFile.
 	memo := GAMemo new.
 	memo processPopulationData: populationsData with: populations.
-	elementFileData := self readElementFile.
-	memo processElementsData: elementFileData.
+	(elementsFile notNil and: [ elementsFile notEmpty ])
+		ifTrue: [ elementFileData := self readElementFile.
+		memo processElementsData: elementFileData.
+	].
 	^ memo

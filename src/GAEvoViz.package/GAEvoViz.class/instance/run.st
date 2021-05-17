@@ -20,6 +20,7 @@ run
 	generationContribution := self generationContributionGiven: height and: (ys collect: #key)."
 	"similarityPanel := self similarityShape: canvas withHeight: height boxIds: boxIds and: (ys collect: [:ass | ass key + (ass value / 2)])."
 	canvas addAll: centerPanel.
+	self addHighlightBox: highlightBox on: canvas ofColor: (dictColor at: 'highlightBox').
 	canvas @ RSCanvasController.
 	^ canvas
 	
