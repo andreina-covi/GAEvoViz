@@ -9,3 +9,19 @@ Metacello new
  repository: 'github://andreina-covi/GAEvoViz:main/src';
  load.
 ```
+
+## Script
+
+```Smalltalk
+GAEvoViz new
+	populations: populations; 
+	populationFileName: csvPopulationFilename;
+	run.
+	```
+ 
+ Optionally you can assign the metric and similarity file .csv.
+ 
+ ```Smalltalk
+ metricFileName: csvMetricFilename;
+	similarityFilename: csvSimilarityFilename;
+ ```
