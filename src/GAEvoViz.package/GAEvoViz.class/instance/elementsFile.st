@@ -1,3 +1,0 @@
-accessing
-elementsFile 
-	^ elementsFile asFileReference 

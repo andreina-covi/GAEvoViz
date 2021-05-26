@@ -1,9 +1,11 @@
 as yet unclassified
 convertDataPopulationOnMemo 
 	| populationsData elementFileData memo |
-	populationsData := self readPopulationFile.
+	populationsData := self readHeaderAndContentFrom: self populationFile.
 	memo := GAMemo new.
 	memo processPopulationData: populationsData with: populations.
-	elementFileData := self readElementFile.
-	memo processElementsData: elementFileData.
+	"(elementsFile notNil and: [ elementsFile notEmpty ])
+		ifTrue: [ elementFileData := self readContent: self elementsFile.
+		memo processElementsData: elementFileData.
+	]."
 	^ memo

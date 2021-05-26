@@ -24,14 +24,14 @@ defaultDictionaryColors
 		at: 'axis' put: (Color r: 0.12549019607843137 g: 0.1803921568627451 b: 0.23529411764705882);
 		at: 'fittestFitness' put: (Color r: 0 g: 1 b: 0.67);
 		at: 'averageFitness' put: (Color r: 0.5063538611925709 g: 0.5259042033235581 b: 0.8357771260997068);
-		at: 'lowestFitness' put: (Color pink);
+		at: 'worstFitness' put: (Color pink);
 		at: 'seedCoverage' put: (Color r: 0.9530791788856305 g: 0.5102639296187683 b: 0.43499511241446726);
 		at: 'font' put: (Color r: 0.12549019607843137 g: 0.1803921568627451 b: 0.23529411764705882);
-		at: 'rangeInnerBoxColor' put:
+		at: 'rangeColors' put:
 			(#('83142C' 'AF0404' 'BB1542' 'ED3833' 'EB5F5D' 'F3826F' 'FFBA92' 'F0DAB1' 'FFF8CD' 'F7FF56' 'DCFFCC' 'DDF796' 'C3F584' 'A3F7BF' '6bffb8' '42E6A4' '4DD599' '71A95A' '007944' '00818A' '216583' '366ED8' '64C4ED' '5EDFFF' 'B2FCFF' 'FFEDFF' 'C6CBEF' '8186D5' '494CA2' '560764' '930077' 'D527B7' 'FF78AE' 'FFA0D2' ) collect: [:c | Color fromHexString: c ]);
 		at: 'edgeSimilarity' put: (Color r: 0.12903225806451613 g: 0.39589442815249265 b: 0.5141739980449658);
-		at: 'testcaseNode' put: (Color transparent);
-		at: 'markedBoxNode' put: (Color r: 0 g: 1 b: 0.67);
-		at: 'boxFontColor' put: (Color black);
+		at: 'similarityIndividual' put: (Color transparent);
+		at: 'markedSimilarityIndividual' put: (Color r: 0 g: 1 b: 0.67);
+		at: 'individualFontColor' put: (Color black);
 		at: 'fontBar' put: Color black;
 		yourself.
