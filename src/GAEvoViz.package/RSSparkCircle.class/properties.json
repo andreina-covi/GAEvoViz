@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "RSAbstractShapesBuilder",
+	"category" : "GAEvoViz",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"objects",
+		"values",
+		"sliceColor",
+		"sliceShape",
+		"scale",
+		"sumValues",
+		"totalSum"
+	],
+	"name" : "RSSparkCircle",
+	"type" : "normal"
+}

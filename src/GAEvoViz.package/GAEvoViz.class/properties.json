@@ -9,8 +9,10 @@
 		"dictionaryColors",
 		"populations",
 		"populationFile",
-		"elementsFile",
-		"comparisonSelector"
+		"comparisonSelector",
+		"metricFileName",
+		"similarityFilename",
+		"blockInnerBox"
 	],
 	"name" : "GAEvoViz",
 	"type" : "normal"

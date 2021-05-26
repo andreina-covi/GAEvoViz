@@ -1,0 +1,3 @@
+initialization
+objects
+	^ objects

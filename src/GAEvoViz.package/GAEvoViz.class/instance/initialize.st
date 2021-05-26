@@ -1,3 +1,4 @@
 initialization
 initialize 
-	comparisonSelector := #<
+	comparisonSelector := #>.
+	blockInnerBox := [ :group | group ]

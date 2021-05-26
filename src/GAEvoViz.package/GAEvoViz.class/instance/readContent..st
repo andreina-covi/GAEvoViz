@@ -1,8 +1,8 @@
 as yet unclassified
-readElementFile
+readContent: fileReference
 	| content |
 	content := OrderedCollection new.
-	self elementsFile readStreamDo: [ :stream |
+	fileReference readStreamDo: [ :stream |
 		content := (NeoCSVReader on: stream) skipHeader;
 			upToEnd.
 	].
