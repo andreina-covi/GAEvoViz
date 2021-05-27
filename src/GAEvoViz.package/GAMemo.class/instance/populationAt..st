@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 populationAt: generation
 	| dict |
 	dict := self at: generation.

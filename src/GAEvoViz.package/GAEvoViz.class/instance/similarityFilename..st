@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 similarityFilename: string
 	similarityFilename := string

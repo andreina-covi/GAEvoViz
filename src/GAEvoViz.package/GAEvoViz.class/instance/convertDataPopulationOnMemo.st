@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 convertDataPopulationOnMemo 
 	| populationsData elementFileData memo |
 	populationsData := self readHeaderAndContentFrom: self populationFile.

@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 innerBox: element withGradientFrom: color1 to: color2 andShape: shape
 	| gradient group |
 	gradient := LinearGradientPaint fromArray: (Array with: 0->color1 with: 1->color2).

@@ -1,10 +1,10 @@
 as yet unclassified
-box: object ofColor: dictColor with: memo highlight: highlight
+box: object ofColor: dictColor with: memo highlight: highlight canvas: canvas
 	| group innerBoxGroup fitnessValue isRemarkable sel |
 	group := RSGroup new.
 	sel := comparisonSelector == #> ifTrue: [ #< ] ifFalse: [ #> ].
 	"innerBoxGroup := self innerBoxGroup: object with: memo highlight: highlight scaleBlock: block."
-	innerBoxGroup := blockInnerBox valueWithEnoughArguments: (Array with: object shapes).
+	innerBoxGroup := blockInnerBox valueWithEnoughArguments: (Array with: (object shapes: canvas)).
 	fitnessValue := (memo fitnessValueOf: object generation given: object position) round: 2.
 	isRemarkable := object parents ifEmpty: [ false ] 
 		ifNotEmpty: [ object parents allSatisfy: [ :obj | (memo fitnessValueOf: obj generation given: obj position) perform: sel with: fitnessValue ] ]. 

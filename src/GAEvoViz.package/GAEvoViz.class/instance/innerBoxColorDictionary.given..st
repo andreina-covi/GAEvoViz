@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 innerBoxColorDictionary: rangeColor given: strings
 	| colors scale color |
 	colors := OrderedCollection new.

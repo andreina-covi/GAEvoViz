@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 similarityGroup: boxIds ofColor: dictColor size: size given: memo
 	| data |
 	data := self transformToDictionary: (self readContent: self similarityFile).

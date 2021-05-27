@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 scaleColorBlock: dictionary
 	^ [ :key | | color |
 		color := [ dictionary at: key ] on: KeyNotFound do: [ Color black ].

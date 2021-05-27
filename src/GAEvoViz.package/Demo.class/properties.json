@@ -9,8 +9,7 @@
 		"children",
 		"parents",
 		"generation",
-		"position",
-		"elements"
+		"position"
 	],
 	"name" : "Demo",
 	"type" : "normal"

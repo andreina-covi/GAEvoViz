@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 contributionShape: height ofColor: dictColor given: ys
 	| data header colors infoColor scale groupSpark x composite |
 	data := self readHeaderAndContentFrom: self metricsFile.

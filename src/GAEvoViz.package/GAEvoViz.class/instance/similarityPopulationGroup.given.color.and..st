@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 similarityPopulationGroup: population given: boxIds color: dictColor and: size
 	| group |
 	group := RSGroup new.

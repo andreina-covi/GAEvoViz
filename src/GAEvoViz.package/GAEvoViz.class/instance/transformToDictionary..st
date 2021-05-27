@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 transformToDictionary: collection
 	| dictionary |
 	self assert: collection notEmpty.

@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 readContent: fileReference
 	| content |
 	content := OrderedCollection new.

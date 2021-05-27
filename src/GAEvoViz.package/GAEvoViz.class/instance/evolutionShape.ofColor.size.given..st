@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 evolutionShape: yPositions ofColor: dictColor size: size given: memo
 	| composite scale points spaceStick xMax |
 	composite := RSComposite new 

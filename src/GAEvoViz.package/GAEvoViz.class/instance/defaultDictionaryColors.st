@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 defaultDictionaryColors 
 	^ Dictionary new 
 		at: 'background' put: Color white;

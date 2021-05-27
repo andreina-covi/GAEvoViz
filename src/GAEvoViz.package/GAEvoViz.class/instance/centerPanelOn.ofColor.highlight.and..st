@@ -23,7 +23,8 @@ centerPanelOn: canvas ofColor: dictColor highlight: highlights and: memo
 				(self box: obj 
 					ofColor: dictColor 
 					with: memo 
-					highlight: highlights second) @ highlights first; yourself
+					highlight: highlights second
+					canvas: canvas) @ highlights first; yourself
 				]).
 				RSHorizontalLineLayout new gapSize: 20; on: group.
 				genNumber := objects first generation.

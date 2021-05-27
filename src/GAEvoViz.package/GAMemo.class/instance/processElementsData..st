@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 processElementsData: collection
 	collection do: [ :subCol | | dict |
 		self assert: subCol size == 4.

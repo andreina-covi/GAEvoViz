@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 evolutionOfPoints: yPositions withScale: scale given: memo
 	| endPoint points listWorst listAverage listFittest |
 	points := Dictionary new.

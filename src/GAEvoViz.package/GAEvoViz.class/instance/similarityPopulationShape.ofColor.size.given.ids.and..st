@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 similarityPopulationShape: memo ofColor: dictColor size: size given: generation ids: boxIds and: data
 	| similarityShape lines |
 	similarityShape := self similarityPopulationGroup: (memo populationAt: generation) given: boxIds color: dictColor and: size.

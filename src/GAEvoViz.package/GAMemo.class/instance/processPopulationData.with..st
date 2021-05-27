@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 processPopulationData: data with: populations 	
 	| header content |
 	header := data first.

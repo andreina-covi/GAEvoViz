@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 similarityShape: boxIds ofHeight: height color: dictColor given: ys memo: memo
 	| scale groupSimilarity lines x |
 	scale := NSScale linear 

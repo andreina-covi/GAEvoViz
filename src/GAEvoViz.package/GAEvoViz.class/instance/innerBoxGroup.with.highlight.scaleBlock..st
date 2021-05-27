@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 innerBoxGroup: object with: memo highlight: highlight scaleBlock: block
 	| group |
 	group := RSGroup new.

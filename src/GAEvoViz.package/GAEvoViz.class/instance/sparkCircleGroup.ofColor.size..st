@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 sparkCircleGroup: collection ofColor: dictColor size: size
 	^ collection collect: [ :array | | spark group |
 		group := RSGroup new.
