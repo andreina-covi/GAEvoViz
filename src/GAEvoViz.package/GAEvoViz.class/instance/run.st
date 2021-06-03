@@ -33,6 +33,7 @@ run
 		contributionShape translateTo: (centerPanel encompassingRectangle topLeft x - contributionShape width - 50) @ centerPanel position y.
 		canvas addShape: contributionShape ]. 
 	canvas addAll: centerPanel.
+	(canvas edges select: [:edge | edge class == RSLine ]) pushBack.
 	barGroup translateTo: (centerPanel encompassingRectangle topRight x + (barGroup width * 1.2)) @ centerPanel position y.
 	canvas addShape: barGroup.
 	evolutionShape := self evolutionShape: (ys collect: #key) ofColor: dictColor size: 800@(centerPanel height) negated given: memo.

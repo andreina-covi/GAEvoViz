@@ -16,7 +16,7 @@ centerPanelOn: canvas ofColor: dictColor highlight: highlights and: memo
 			| group genNumber |
 			group := RSGroup new.
 			index > 1 ifTrue: [ self sortByParentsPosition: objects ].
-			group addAll: (objects collect: [:obj | 
+			group addAll: (objects collect: [:obj |
 				boxIds at: obj generation 
 					ifPresent: [ :col | col add: obj position ]
 					ifAbsentPut: [ OrderedCollection new add: obj position; yourself ].
@@ -34,14 +34,17 @@ centerPanelOn: canvas ofColor: dictColor highlight: highlights and: memo
 	).
 	RSVerticalLineLayout new gapSize: 300; on: generationGroup.
 	shapes := generationGroup flatCollect: #yourself.
-	ys := (shapes groupedBy: [:s | s encompassingRectangle origin y ]) associations 
-		collect: [ :assoc | assoc key -> (assoc value collect: [:comp | comp extent y ]) max ].
+	ys := generationGroup collect: [ :grp | 
+		grp first encompassingRectangle origin y -> (grp collect: [:e | e extent y ]) max ].
+	"ys := (shapes groupedBy: [:s | s encompassingRectangle origin y ]) associations 
+		collect: [ :assoc | assoc key -> (assoc value collect: [:comp | comp extent y ]) max ]."
 	barGroup := RSComposite new shapes: (self setPositions: barGroup using: (ys collect: #key)).
 	RSEdgeBuilder verticalBezier 
 		shapes: shapes;
 		canvas: canvas;
 		width: 5;
 		color: (dictColor at: 'edge');
+		withBorderAttachPoint;
 		connectFromAll: [ :obj | obj parents ].
 	^ Dictionary new 
 		at: 'boxIds' put: boxIds;

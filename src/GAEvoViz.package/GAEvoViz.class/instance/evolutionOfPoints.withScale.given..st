@@ -15,6 +15,6 @@ evolutionOfPoints: yPositions withScale: scale given: memo
 		y := yPositions at: index.
 		listWorst add: (scale scale: sortedValues last) @ y.
 		listAverage add: (scale scale: (sortedValues at: (sortedValues size / 2) asInteger)) @ y.
-		listFittest add: (scale scale: sortedValues first) @ y 
+		listFittest add: (scale scale: sortedValues first) @ y
 	].
 	^ points
