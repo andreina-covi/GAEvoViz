@@ -4,7 +4,7 @@ addSurvivor: object on: collection using: set and: integer
 	association := object generation -> object position.
 	selected := object generation == integer.
 	selected ifFalse: [ 
-		object childrenByGeneration do: [ :each | | included |
+		object children do: [ :each | | included |
 			included := (set includes: each generation -> each position) or: [ 
 				self addSurvivor: each on: collection using: set and: integer ].
 			selected := selected or: [ included ] ]	

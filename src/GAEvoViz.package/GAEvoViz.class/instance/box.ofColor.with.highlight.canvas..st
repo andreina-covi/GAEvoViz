@@ -23,5 +23,5 @@ box: object ofColor: dictColor with: memo highlight: highlight canvas: canvas
 		border: (RSBorder new width: (isRemarkable ifTrue: [ 8 ] ifFalse: [ 1 ] );
 			color: (dictColor at: 'borderBox'));
 		padding: 10;
-		popupText: object print;
+		popupText: object asString;
 		draggable
