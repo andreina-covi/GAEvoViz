@@ -1,6 +1,6 @@
 accessing
 convertDataPopulationOnMemo 
-	| populationsData elementFileData memo |
+	| populationsData memo |
 	populationsData := self readHeaderAndContentFrom: self populationFile.
 	memo := GAMemo new.
 	memo processPopulationData: populationsData with: populations.

@@ -5,10 +5,10 @@ run
 	dictionaryLegendColor := Dictionary new.
 	canvas := RSCanvas new
 		color: (dictColor at: 'background').
-	highlightBox := RSHighlightable new
+	highlightBox := RSHighlightableInteraction new
 		highlightColor: (dictColor at: 'highlightBox');
 		yourself.
-	highlightInnerBox := RSHighlightable new
+	highlightInnerBox := RSHighlightableInteraction new
 		highlightColor: (dictColor at: 'highlightInnerBox');
 		yourself.
 	memo := self convertDataPopulationOnMemo.
@@ -42,7 +42,7 @@ run
 	self addHighlightBox: highlightBox on: canvas ofColor: (dictColor at: 'highlightBox').
 	self assignLegendColors: dictionaryLegendColor given: dictColor.
 	self addLegendOn: canvas given: (dictColor at: 'font') and: dictionaryLegendColor.
-	canvas @ RSCanvasController.
+	canvas @ RSCanvasControllerInteraction.
 	^ canvas
 	
 	

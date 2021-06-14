@@ -5,7 +5,7 @@ box: object ofColor: dictColor with: memo highlight: highlight canvas: canvas
 	sel := comparisonSelector == #> ifTrue: [ #< ] ifFalse: [ #> ].
 	"innerBoxGroup := self innerBoxGroup: object with: memo highlight: highlight scaleBlock: block."
 	innerBoxGroup := blockInnerBox valueWithEnoughArguments: (Array with: (object shapes: canvas)).
-	fitnessValue := (memo fitnessValueOf: object generation given: object position) round: 2.
+	fitnessValue := memo fitnessValueOf: object generation given: object position.
 	isRemarkable := object parents ifEmpty: [ false ] 
 		ifNotEmpty: [ object parents allSatisfy: [ :obj | (memo fitnessValueOf: obj generation given: obj position) perform: sel with: fitnessValue ] ]. 
 	"enhance := innerBoxGroup notEmpty or: [ isRemarkable ]."
