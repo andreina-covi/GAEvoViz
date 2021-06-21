@@ -1,7 +1,7 @@
 adding
 addHighlightBox: highlight on: canvas ofColor: color
 	| interaction  |
-	interaction :=  RSHighlightableInteraction new highlightColor: color; yourself.
+	interaction :=  RSHighlightable new highlightColor: color; yourself.
 	highlight 
 		when: RSHighlightEvent do: [ :evt | 
 			| shapes edges index |
