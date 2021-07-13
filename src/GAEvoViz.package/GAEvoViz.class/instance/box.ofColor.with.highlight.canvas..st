@@ -1,4 +1,4 @@
-as yet unclassified
+visualization
 box: object ofColor: dictColor with: memo highlight: highlight canvas: canvas
 	| group innerBoxGroup fitnessValue isRemarkable sel |
 	group := RSGroup new.

@@ -1,4 +1,4 @@
-as yet unclassified
+adding
 fillMemo: metricNames with: collection
 	collection do: [ :array |
 		self at: array first asInteger of: array second asInteger put: (array third asNumber round: 5) asFloat.

@@ -1,13 +1,14 @@
-as yet unclassified
+visualization
 centerPanelOn: canvas ofColor: dictColor highlight: highlights and: memo
-	| generationGroup barGroup survivors boxIds set ys shapes |
+	| generationGroup barGroup survivors boxIds set ys shapes fitnessValue |
 	generationGroup := RSGroup new.
 	barGroup := RSGroup new.
 	survivors := OrderedCollection new.
 	boxIds := Dictionary new.
 	set := Set new.
 	ys := OrderedCollection new.
-	populations first do: [ :obj | self addSurvivor: obj on: survivors using: set and: populations size ].
+	fitnessValue := (self sortFitnessValues: (memo fitnessValuesOf: memo size)) size.
+	populations first do: [ :obj | self addSurvivor: obj on: survivors using: set generation: populations size fitness: fitnessValue and: memo ].
 	survivors sort: [ :obj1 :obj2 | (obj1 generation < obj2 generation) or: [ (obj1 generation = obj2 generation) and: [ obj1 position < obj2 position ] ] ].
 	"printInnerBoxes := (survivors flatCollect: [ :obj | obj elements collect: #asString ]) asSet.
 	scaleColorBlock := self scaleColorBlock: (self innerBoxColorDictionary:(dictColor at: 'rangeColors') given: printInnerBoxes)."

@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 fitnessValueOf: generation given: position
 	| dict |
 	dict := self at: generation of: position.

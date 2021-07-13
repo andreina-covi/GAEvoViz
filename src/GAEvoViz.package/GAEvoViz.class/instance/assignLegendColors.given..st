@@ -1,4 +1,4 @@
-as yet unclassified
+running
 assignLegendColors: dictionary given: dictColor
 	| colors |
 	colors := dictColor at: 'rangeColors'.
