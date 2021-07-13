@@ -7,7 +7,7 @@ centerPanelOn: canvas ofColor: dictColor highlight: highlights and: memo
 	boxIds := Dictionary new.
 	set := Set new.
 	ys := OrderedCollection new.
-	fitnessValue := (self sortFitnessValues: (memo fitnessValuesOf: memo size)) size.
+	fitnessValue := (self sortFitnessValues: (memo fitnessValuesOf: memo size)) first.
 	populations first do: [ :obj | self addSurvivor: obj on: survivors using: set generation: populations size fitness: fitnessValue and: memo ].
 	survivors sort: [ :obj1 :obj2 | (obj1 generation < obj2 generation) or: [ (obj1 generation = obj2 generation) and: [ obj1 position < obj2 position ] ] ].
 	"printInnerBoxes := (survivors flatCollect: [ :obj | obj elements collect: #asString ]) asSet.
